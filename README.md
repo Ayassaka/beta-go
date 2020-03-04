@@ -7,3 +7,7 @@ An action strategy game based on rule of Gomoku
 ## Log
 
 - demo version completed
+
+## Known Issues
+
+- Reloading Scene causes winning tester to fail
