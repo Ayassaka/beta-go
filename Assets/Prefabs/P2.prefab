@@ -32,6 +32,11 @@ PrefabInstance:
       propertyPath: holdKey
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 4182566392698638441, guid: 57b4de2d0bed17e469210d59e39a2222,
+        type: 3}
+      propertyPath: pieceColor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4182566392698638443, guid: 57b4de2d0bed17e469210d59e39a2222,
         type: 3}
       propertyPath: m_LocalPosition.x

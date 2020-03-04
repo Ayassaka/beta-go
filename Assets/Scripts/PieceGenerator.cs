@@ -12,7 +12,7 @@ public class PieceGenerator : MonoBehaviour
     bool waiting = false;
     public float maxWaitTime = 5f;
     public float minWaitTime = 5f;
-    int pieceCount = 0;
+    // int pieceCount = 0;
 
     private void Start() {
         gr = GameRules.instance;
@@ -32,7 +32,13 @@ public class PieceGenerator : MonoBehaviour
     }
 
     void generatePiece() {
-        pieceCount++;
+        // pieceCount++;
+
+        Instantiate(whitePrefab, choosePosition(), Quaternion.identity);
+        Instantiate(blackPrefab, choosePosition(), Quaternion.identity);
+    }
+
+    Vector3 choosePosition() {
         Vector3 position;
         do {
             float x,y;
@@ -40,8 +46,6 @@ public class PieceGenerator : MonoBehaviour
             y = Random.Range(-maxAxis, maxAxis);
             position = new Vector3(x, y, 0);
         } while (Physics.CheckSphere(position, gr.pieceRadius));
-
-        GameObject _piece = (pieceCount % 2 == 0) ? whitePrefab : blackPrefab;
-        Instantiate(_piece, position, Quaternion.identity);
+        return position;
     }
 }

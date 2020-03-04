@@ -18,6 +18,8 @@ public class PlayerControl : MonoBehaviour
   public KeyCode downKey = KeyCode.DownArrow;
   public KeyCode holdKey = KeyCode.Space;
 
+  public PieceColor pieceColor;
+
   // Start is called before the first frame update
   void Start()
   {
@@ -91,7 +93,7 @@ public class PlayerControl : MonoBehaviour
     RaycastHit hit;
     if (Physics.Raycast(transform.position, transform.right, out hit, maxPickUpDistance)) {
       PieceControl picking = hit.collider.gameObject.GetComponent<PieceControl>();
-      if (!picking.isHeld()) {
+      if (!picking.isHeld() && picking.pieceColor == pieceColor) {
         picking.hold(rb);
         picked = picking;
         force = force * carryForceMultiplier;

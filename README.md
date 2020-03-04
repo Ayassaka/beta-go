@@ -11,3 +11,9 @@ An action strategy game based on rule of Gomoku
 ## Known Issues
 
 - Reloading Scene causes winning tester to fail
+
+## Possible changes
+
+- add dashing / running (with stamina limit or not)
+- changing goal number of pieces
+- adding aesthetic (associated with number of pieces in a row)
